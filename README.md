@@ -21,6 +21,18 @@ KALUM gives clients a direct, one-to-one line to the people at Kalunga who work 
 
 Further features (notifications, attachments, assignment of clients to employees, etc.) are to be defined.
 
+## Technical documentation
+
+### Class diagram (UML)
+
+The initial class diagram documents the main domain entities and their attributes and operations.
+
+![KALUM_app class diagram](docs/diagrams/class-diagram.svg)
+
+[Open the class diagram](docs/diagrams/class-diagram.svg).
+
+> **Modeling note:** this is an initial structural draft based on the diagram supplied by the project team. Associations, multiplicities, and some method signatures still need to be reviewed and completed before implementation. Keep this diagram synchronized with the agreed requirements and database model.
+
 ## Tech stack
 
 _To be decided._ Add the frontend, backend, database and hosting choices here once they are settled.
