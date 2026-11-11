@@ -21,6 +21,20 @@ KALUM gives clients a direct, one-to-one line to the people at Kalunga who work 
 
 Further features (notifications, attachments, assignment of clients to employees, etc.) are to be defined.
 
+## Technical documentation
+
+### Diagrama de Classes UML
+
+[Consultar o Diagrama de Classes](docs/diagrams/class-diagram.svg).
+
+### DIAGRAMA VGI A3 — Visão Geral da Interação
+
+Documento versionado em Mermaid, com visualização diretamente pelo GitHub.
+
+[Consultar o DIAGRAMA VGI A3](docs/diagrams/diagrama-vgi-a3.md).
+
+> **Nota de alinhamento:** a documentação dos diagramas registra uma divergência entre o escopo descrito neste README (funcionários e clientes) e os requisitos internos discutidos pela equipe (comunicação apenas entre funcionários). O Product Owner deve validar e unificar o escopo.
+
 ## Tech stack
 
 _To be decided._ Add the frontend, backend, database and hosting choices here once they are settled.
