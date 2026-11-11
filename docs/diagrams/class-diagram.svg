@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1320" viewBox="0 0 1200 1320">
+<rect width="1200" height="1320" fill="#f4f6fb"/>
+<text x="600" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#172554">KALUM_app — Diagrama de Classes UML</text>
+<text x="600" y="84" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#475569">Versão inicial baseada no diagrama enviado • relações e multiplicidades pendentes de validação</text>
+<style>
+.cls{fill:#fff;stroke:#64748b;stroke-width:2;rx:8}
+.head{fill:#fef3c7;stroke:#64748b;stroke-width:2}
+.name{font: bold 19px Arial,sans-serif;fill:#172554}
+.txt{font: 14px Arial,sans-serif;fill:#1e293b}
+.sep{stroke:#94a3b8;stroke-width:1.5}
+</style>
+<g transform="translate(60 130)">
+<rect class="cls" width="490" height="260"/><rect class="head" width="490" height="44" rx="8"/><text class="name" x="245" y="28" text-anchor="middle">AdministradorTI</text><line class="sep" x1="0" y1="44" x2="490" y2="44"/><text class="txt" x="22" y="72">+ id: Int</text><text class="txt" x="22" y="96">+ nome: String</text><text class="txt" x="22" y="120">+ email: String</text><line class="sep" x1="0" y1="140" x2="490" y2="140"/><text class="txt" x="22" y="168">+ criarUsuario(nome, email, senha): Usuario</text><text class="txt" x="22" y="192">+ desativarUsuario(usuarioId): Boolean</text><text class="txt" x="22" y="216">+ reativarUsuario(usuarioId): Boolean</text><text class="txt" x="22" y="240">+ consultarAuditoria(filtro): List</text>
+</g>
+<g transform="translate(650 130)">
+<rect class="cls" width="490" height="260"/><rect class="head" width="490" height="44" rx="8"/><text class="name" x="245" y="28" text-anchor="middle">RegistroAuditoria</text><line class="sep" x1="0" y1="44" x2="490" y2="44"/><text class="txt" x="22" y="72">+ id: Int</text><text class="txt" x="22" y="96">+ acao: String</text><text class="txt" x="22" y="120">+ dataHora: Date</text><text class="txt" x="22" y="144">+ responsavel: String</text><text class="txt" x="22" y="168">+ descricao: String</text><line class="sep" x1="0" y1="184" x2="490" y2="184"/><text class="txt" x="22" y="212">+ registrarAcao(): void</text><text class="txt" x="22" y="236">+ consultarRegistros(): List</text>
+</g>
+<g transform="translate(60 440)">
+<rect class="cls" width="490" height="290"/><rect class="head" width="490" height="44" rx="8"/><text class="name" x="245" y="28" text-anchor="middle">Usuario</text><line class="sep" x1="0" y1="44" x2="490" y2="44"/><text class="txt" x="22" y="72">+ id: Int</text><text class="txt" x="22" y="96">+ nome: String</text><text class="txt" x="22" y="120">+ email: String</text><text class="txt" x="22" y="144">+ senhaHash: String</text><text class="txt" x="22" y="168">+ status: Boolean</text><text class="txt" x="22" y="192">+ dataCriacao: Date</text><line class="sep" x1="0" y1="208" x2="490" y2="208"/><text class="txt" x="22" y="236">+ fazerLogin(email, senha): Boolean</text><text class="txt" x="22" y="260">+ enviarMensagem(conversaId, conteudo): Int</text><text class="txt" x="22" y="284">+ visualizarConversas(): List</text>
+</g>
+<g transform="translate(650 440)">
+<rect class="cls" width="490" height="290"/><rect class="head" width="490" height="44" rx="8"/><text class="name" x="245" y="28" text-anchor="middle">Sessao</text><line class="sep" x1="0" y1="44" x2="490" y2="44"/><text class="txt" x="22" y="72">+ id: Int</text><text class="txt" x="22" y="96">+ dataInicio: Date</text><text class="txt" x="22" y="120">+ dataFim: Date</text><text class="txt" x="22" y="144">+ ativa: Boolean</text><line class="sep" x1="0" y1="164" x2="490" y2="164"/><text class="txt" x="22" y="192">+ iniciarSessao(): void</text><text class="txt" x="22" y="216">+ encerrarSessao(): void</text><text class="txt" x="22" y="240">+ renovarSessao(): void</text><text class="txt" x="22" y="264">+ estaAtiva(): Boolean</text>
+</g>
+<g transform="translate(60 780)">
+<rect class="cls" width="490" height="230"/><rect class="head" width="490" height="44" rx="8"/><text class="name" x="245" y="28" text-anchor="middle">Conversa</text><line class="sep" x1="0" y1="44" x2="490" y2="44"/><text class="txt" x="22" y="72">+ id: Int</text><text class="txt" x="22" y="96">+ dataCriacao: Date</text><text class="txt" x="22" y="120">+ tipo: String</text><line class="sep" x1="0" y1="140" x2="490" y2="140"/><text class="txt" x="22" y="168">+ adicionarParticipante(usuarioId): Boolean</text><text class="txt" x="22" y="192">+ consultarMensagens(): List</text><text class="txt" x="22" y="216">+ obterUltimaMensagem(): Mensagem</text>
+</g>
+<g transform="translate(650 780)">
+<rect class="cls" width="490" height="230"/><rect class="head" width="490" height="44" rx="8"/><text class="name" x="245" y="28" text-anchor="middle">Mensagem</text><line class="sep" x1="0" y1="44" x2="490" y2="44"/><text class="txt" x="22" y="72">+ id: Int</text><text class="txt" x="22" y="96">+ conteudo: String</text><text class="txt" x="22" y="120">+ dataEnvio: Date</text><text class="txt" x="22" y="144">+ tipo: String</text><line class="sep" x1="0" y1="164" x2="490" y2="164"/><text class="txt" x="22" y="192">+ enviar(): Boolean</text><text class="txt" x="22" y="216">+ visualizar(): String</text>
+</g>
+<g transform="translate(355 1060)">
+<rect class="cls" width="490" height="220"/><rect class="head" width="490" height="44" rx="8"/><text class="name" x="245" y="28" text-anchor="middle">Anexo</text><line class="sep" x1="0" y1="44" x2="490" y2="44"/><text class="txt" x="22" y="72">+ id: Int</text><text class="txt" x="22" y="96">+ nomeArquivo: String</text><text class="txt" x="22" y="120">+ formato: String</text><text class="txt" x="22" y="144">+ tamanho: Double</text><line class="sep" x1="0" y1="164" x2="490" y2="164"/><text class="txt" x="22" y="192">+ validarFormato(): Boolean</text><text class="txt" x="22" y="216">+ armazenarArquivo(): Boolean</text>
+</g>
+</svg>
