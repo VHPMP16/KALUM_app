@@ -1,52 +1,57 @@
-# KALUM
+# KALUM_app
 
-A chat app that connects **Kalunga** employees with their clients.
+Uma aplicação web de comunicação interna que conecta **exclusivamente os funcionários da Kalunga** em conversas privadas e individuais.
 
-KALUM gives clients a direct, one-to-one line to the people at Kalunga who work with them, and gives employees a single place to see and answer those conversations.
+O KALUM_app tem como objetivo oferecer um canal corporativo próprio para troca de mensagens entre funcionários ativos, com gestão de contas pela equipe de TI, histórico de conversas, envio controlado de anexos e recursos de auditoria sujeitos a permissões específicas.
 
-> **Status:** early development. The repository currently contains the project scaffold only; the sections below describe what KALUM is intended to do and will be filled in as the code lands.
+> **Status:** em desenvolvimento inicial. Este repositório contém a estrutura inicial do projeto; funcionalidades e decisões técnicas serão detalhadas à medida que o desenvolvimento avançar.
 
-## Who it's for
+## Público-alvo
 
-| Role | What they use KALUM for |
+| Perfil | Utilização |
 | --- | --- |
-| **Clients** | Reaching their Kalunga contacts directly and keeping the conversation history in one place. |
-| **Kalunga employees** | Receiving, answering and following up on client conversations. |
+| **Funcionários** | Iniciar conversas individuais, enviar e receber mensagens e consultar o próprio histórico. |
+| **Administradores de TI** | Utilizar o chat e realizar tarefas autorizadas de gerenciamento de contas. |
+| **Administrador Principal de TI** | Gerenciar administradores e conceder ou revogar permissões especiais de auditoria. |
 
-## Features
+O sistema é destinado exclusivamente à comunicação interna entre funcionários. **Clientes, fornecedores e usuários externos não fazem parte do público-alvo.**
 
-- Direct messaging between Kalunga employees and clients
-- Conversation history per client
-- Separate client and employee experiences
+## Funcionalidades previstas
 
-Further features (notifications, attachments, assignment of clients to employees, etc.) are to be defined.
+- Conversas privadas individuais entre funcionários ativos.
+- Cadastro e gerenciamento de contas exclusivamente pela equipe de TI.
+- Histórico de mensagens permanente e imutável.
+- Confirmações de entrega e leitura.
+- Envio de anexos PDF e JPEG, limitados a 10 MB por arquivo.
+- Notificações dentro da aplicação e do navegador.
+- Perfis com iniciais como avatar padrão e foto opcional.
+- Auditoria de mensagens e atividades administrativas mediante permissões específicas.
 
-## Tech stack
+## Plataforma e tecnologias
 
-_To be decided._ Add the frontend, backend, database and hosting choices here once they are settled.
+- **Hospedagem e implantação:** Vercel.
+- **Plataforma de backend e dados:** Supabase.
+- **Frontend, linguagem, frameworks e arquitetura:** a definir pela equipe técnica.
 
-## Getting started
+## Escopo inicial de dispositivos
 
-_Setup instructions will be added once the application code is in place._
+A primeira versão será uma aplicação web voltada a **computadores desktop**, com prioridade de compatibilidade para o Google Chrome. Experiência mobile não faz parte do escopo inicial aprovado.
 
-Expected sections once available:
+## Documentação
 
-1. Prerequisites
-2. Installation
-3. Configuration (environment variables)
-4. Running locally
-5. Running tests
+A documentação funcional e técnica do projeto será mantida na pasta [Docs/](Docs/).
 
-## Project structure
+## Como começar
 
-_To be added._
+As instruções de instalação e execução serão adicionadas quando a estrutura de código e as configurações de ambiente estiverem definidas.
 
-## Contributing
+## Contribuição
 
-1. Create a branch from `main`
-2. Make your changes with clear, focused commits
-3. Open a pull request describing what changed and why
+1. Crie uma branch a partir de `main`.
+2. Faça alterações pequenas e focadas.
+3. Registre commits claros.
+4. Abra um pull request explicando o que mudou e por quê.
 
-## License
+## Licença
 
-Released under the [MIT License](LICENSE).
+Distribuído sob a [Licença MIT](LICENSE).
