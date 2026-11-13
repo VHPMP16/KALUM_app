@@ -2,7 +2,7 @@
 
 **Projeto:** KALUM_app  
 **Versão:** Atualizada  
-**Fonte visual:** [UML - Classes KALUM_app no Miro](https://miro.com/app/board/uXjVEPFukL0=/?moveToWidget=3458764690378993460)  
+**Fonte visual:** [UML - Classes KALUM_app no Miro](https://miro.com/app/board/uXjVEPFukL0=/?moveToWidget=3458764690379903424)  
 **Frame:** KALUM_app | UML - Diagrama de Classes Atualizado
 
 ## Finalidade
