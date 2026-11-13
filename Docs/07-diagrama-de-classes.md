@@ -185,9 +185,21 @@ AdministradorTI "1" --> "0..*" RegistroAuditoria : executa
 classDef domain fill:#FFE86D,stroke:#CBB333,color:#574900
 classDef security fill:#FFB575,stroke:#CA7933,color:#542700
 classDef support fill:#9CE6FF,stroke:#4FB1D3,color:#1C4657
-class Funcionario,ContaAcesso,Conversa,Mensagem,Anexo,Notificacao domain
-class AdministradorTI,SolicitacaoAcessoExterno,RegistroAuditoria security
-class SolicitacaoGestaoConta,StatusFuncionario,StatusConta,StatusEntrega,TipoSolicitacao,StatusSolicitacaoExterna support
+class Funcionario domain
+class ContaAcesso domain
+class Conversa domain
+class Mensagem domain
+class Anexo domain
+class Notificacao domain
+class AdministradorTI security
+class SolicitacaoAcessoExterno security
+class RegistroAuditoria security
+class SolicitacaoGestaoConta support
+class StatusFuncionario support
+class StatusConta support
+class StatusEntrega support
+class TipoSolicitacao support
+class StatusSolicitacaoExterna support
 ```
 
 ## Regras de negócio representadas
