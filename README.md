@@ -1,57 +1,44 @@
-# KALUM_app
+# KALUM_app — Comunicação Corporativa
 
-Uma aplicação web de comunicação interna que conecta **exclusivamente os funcionários da Kalunga** em conversas privadas e individuais.
+Aplicação web de comunicação interna da Kalunga, destinada exclusivamente a funcionários com contas corporativas ativas e à equipe de TI autorizada.
 
-O KALUM_app tem como objetivo oferecer um canal corporativo próprio para troca de mensagens entre funcionários ativos, com gestão de contas pela equipe de TI, histórico de conversas, envio controlado de anexos e recursos de auditoria sujeitos a permissões específicas.
+Este repositório preserva a documentação de requisitos já existente em `Docs/` e incorpora a implementação Next.js/Supabase do ChatApp. A documentação técnica da implementação fica em `docs/`.
 
-> **Status:** em desenvolvimento inicial. Este repositório contém a estrutura inicial do projeto; funcionalidades e decisões técnicas serão detalhadas à medida que o desenvolvimento avançar.
+## Stack
+- Next.js 16, React 19 e TypeScript
+- Supabase Auth, PostgreSQL, RLS, Realtime e Storage
+- Tailwind CSS
+- Vercel
+- Node.js 22.x
 
-## Público-alvo
+## Configuração local
+1. Instale Node.js 22.x.
+2. Execute `npm ci`.
+3. Copie `.env.example` para `.env.local`.
+4. Preencha as variáveis do projeto Supabase de desenvolvimento.
+5. Execute `npm run dev`.
 
-| Perfil | Utilização |
-| --- | --- |
-| **Funcionários** | Iniciar conversas individuais, enviar e receber mensagens e consultar o próprio histórico. |
-| **Administradores de TI** | Utilizar o chat e realizar tarefas autorizadas de gerenciamento de contas. |
-| **Administrador Principal de TI** | Gerenciar administradores e conceder ou revogar permissões especiais de auditoria. |
+## Verificações
+```bash
+npm run lint
+npm run typecheck
+npm test
+npm run build
+```
 
-O sistema é destinado exclusivamente à comunicação interna entre funcionários. **Clientes, fornecedores e usuários externos não fazem parte do público-alvo.**
+## Banco de dados e segurança
+As migrations versionadas estão em `supabase/migrations/`. Revise-as e aplique-as somente ao projeto Supabase de desenvolvimento autorizado. Use exclusivamente dados fictícios.
 
-## Funcionalidades previstas
-
-- Conversas privadas individuais entre funcionários ativos.
-- Cadastro e gerenciamento de contas exclusivamente pela equipe de TI.
-- Histórico de mensagens permanente e imutável.
-- Confirmações de entrega e leitura.
-- Envio de anexos PDF e JPEG, limitados a 10 MB por arquivo.
-- Notificações dentro da aplicação e do navegador.
-- Perfis com iniciais como avatar padrão e foto opcional.
-- Auditoria de mensagens e atividades administrativas mediante permissões específicas.
-
-## Plataforma e tecnologias
-
-- **Hospedagem e implantação:** Vercel.
-- **Plataforma de backend e dados:** Supabase.
-- **Frontend, linguagem, frameworks e arquitetura:** a definir pela equipe técnica.
-
-## Escopo inicial de dispositivos
-
-A primeira versão será uma aplicação web voltada a **computadores desktop**, com prioridade de compatibilidade para o Google Chrome. Experiência mobile não faz parte do escopo inicial aprovado.
+O fluxo de anexos permanece em quarentena: não habilitar upload operacional nem download até integrar e validar um scanner antimalware real. A limitação do plano Free referente à proteção contra senhas vazadas continua registrada como pendência, não como resolvida.
 
 ## Documentação
+- `Docs/`: documentação de requisitos e produto preexistente do KALUM_app.
+- `docs/ARQUITETURA-TECNICA.md`: arquitetura técnica da implementação.
+- `docs/PLANO-TESTES-SQA.md`: plano de testes.
+- `docs/SECURITY-EXCEPTION-LEAKED-PASSWORDS-FREE.md`: pendência de segurança.
+- `docs/INCIDENTE-ENVIO-MENSAGENS-2026-11-20.md`: registro técnico de incidente e correção.
 
-A documentação funcional e técnica do projeto será mantida na pasta [Docs/](Docs/).
+## Compatibilidade de escopo
+A implementação importada inclui funcionalidades adicionais (por exemplo, grupos e busca global) que devem ser confrontadas com os requisitos aprovados em `Docs/` antes de qualquer liberação. A documentação original foi mantida sem alterações.
 
-## Como começar
-
-As instruções de instalação e execução serão adicionadas quando a estrutura de código e as configurações de ambiente estiverem definidas.
-
-## Contribuição
-
-1. Crie uma branch a partir de `main`.
-2. Faça alterações pequenas e focadas.
-3. Registre commits claros.
-4. Abra um pull request explicando o que mudou e por quê.
-
-## Licença
-
-Distribuído sob a [Licença MIT](LICENSE).
+Não considerar o sistema pronto para produção sem testes completos, revisão de segurança e validação operacional.
